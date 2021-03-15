@@ -11,7 +11,7 @@ services:
         - web
         container_name: loadbalancer
         ports:
-            - "8088:6001"
+            - "8080:6001"
 
     web:
         build:
@@ -19,9 +19,8 @@ services:
             dockerfile: Dockerfile
         depends_on:
         - db
-        container_name: web
         ports:
-            - "8085-8087:6001"
+            - "8085-8088:6001"
 
     db:
         image: mongo:latest

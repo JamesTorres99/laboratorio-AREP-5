@@ -1,11 +1,7 @@
 package edu.escuelaing.arep;
 
 
-import static spark.Spark.get;
-import static spark.Spark.post;
-import static spark.Spark.port;
-
-import java.util.ArrayList;
+import static spark.Spark.*;
 
 import com.google.gson.Gson;
 
@@ -18,13 +14,13 @@ import edu.escuelaing.arep.persistencia.impl.ConetionDB;
  */
 public class SparkWebServer 
 {
-	static MensajePersistencia persistencia= new ConetionDB(); 
 	/**
 	 * Inicializa el servidor web de spark y publica los mensajes
 	 * @param args ejecucion
 	 */
 	public static void main( String[] args  ) {
-        port(getPort()); 
+		MensajePersistencia persistencia= new ConetionDB(); 
+		port(getPort()); 
         get("/mensajes", (req,res) -> {
         res.status(200);
         res.type("application/json");//aqui
@@ -32,7 +28,8 @@ public class SparkWebServer
         });
         
         post("/mensajes",(request, response) -> {
-        	persistencia.escribirMensajes(new Mensaje(request.body()));
+        	Mensaje a =new Mensaje(request.body());
+        	persistencia.escribirMensajes(a);
             return "";
         });
   }

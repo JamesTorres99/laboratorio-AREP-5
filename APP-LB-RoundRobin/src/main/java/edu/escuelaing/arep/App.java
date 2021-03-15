@@ -26,13 +26,13 @@ public class App
         get("/mensajes",(req, res) -> {
             res.status(200);
             res.type("application/json");
-            String response=cliente.getMessages("/mensajes");
+            String response=cliente.getMessages();
             cliente.roundRobin();
             return response;
         });
 
         post("/mensajes",(request, response) -> {
-            cliente.postMessage(request.body(),"/mensajes");
+            cliente.postMessage(request.body());
             cliente.roundRobin();
             return "";
         });

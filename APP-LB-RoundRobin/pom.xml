@@ -25,6 +25,12 @@
 	  <version>2.9.3</version>
 	</dependency>
 	
+	<dependency>
+      <groupId>com.mashape.unirest</groupId>
+      <artifactId>unirest-java</artifactId>
+      <version>1.4.9</version>
+    </dependency>
+    
 	<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
 	<dependency>
 	    <groupId>org.mongodb</groupId>

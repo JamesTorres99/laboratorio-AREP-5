@@ -39,6 +39,7 @@ public class ConetionDB implements MensajePersistencia {
 	 */
 	@Override
 	public void escribirMensajes(Mensaje mensaje) {
+		cliente= new MongoClient(uri);
 		MongoDatabase basedeDatos= cliente.getDatabase("LabArep5");
         MongoCollection<Document> collection =basedeDatos.getCollection("mensajes");
         Document document=new Document();
@@ -53,12 +54,11 @@ public class ConetionDB implements MensajePersistencia {
 	 */
 	@Override
 	public ArrayList<Mensaje> leerMensajes() {
-		 ArrayList<Mensaje> mensajes=new ArrayList<>();
-
-	        MongoDatabase database = cliente.getDatabase("LabArep5");
+		    MongoDatabase database = cliente.getDatabase("LabArep5");
 	        MongoCollection<Document> collection =database.getCollection("mensajes");
 	        FindIterable fit = collection.find();
 	        ArrayList<Document> docs = new ArrayList<Document>();
+	        ArrayList<Mensaje> mensajes=new ArrayList<Mensaje>();
 	        fit.into(docs);
 	        for (Document document:docs) {
 	            String mensaje= (String) document.get("mensaje");
