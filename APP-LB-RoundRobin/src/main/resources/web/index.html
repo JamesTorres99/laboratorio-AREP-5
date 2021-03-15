@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<h:head>
+		<style>
+		body {background-color: LightSteelBlue;}
+		h1   {color: blue;}
+		p    {color: White;}
+		
+		.center {
+		 text-align: center;
+		border: 3px solid green;
+			}
+			
+		input[type=text] {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  box-sizing: border-box;
+		  border: none;
+		  background-color: #3CBC8D;
+		  color: white;
+		}
+		
+		outputLabel [type=text] {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  box-sizing: border-box;
+		  border: none;
+		  background-color: #3CBC8D;
+		  color: white;
+		}
+		</style>
+	</h:head>
+
+	<h:body>
+		<h:form id="calculadora_form" header="Calculadora">	
+			<div class="center">
+			<h1><p align="center" style="font-size:40px;">Mensajes app</p></h1>
+			<h3> <p align="center">James Torres</p></h3>
+			<img src="https://media.tenor.com/images/de2a9b7bb8147c9c93a0d4e474550fbe/tenor.gif" alt="programing" style="width:120px;height:100px;">
+		</img>
+
+		</div>
+			<h3> <p align="center">
+			</p></h3>
+			<p:inputText id="datos" placeholder="Ingrese los valores" value="#{calculadoraBean.datos}" />
+			
+			<p:panelGrid columns="4" style="max-width:500px;margin-left:auto;margin-right:auto; background-color: #3CBC8D">
+		
+			</p:panelGrid>
+
+
+			<p:panelGrid columns="2" style="max-width:500px;margin-left:auto;margin-right:auto;">
+			<p:commandButton align="center" style="background-color: #3CBC8D" update="calculadora_form" actionListener="#{calculadoraBean.calculateValues(calculadoraBean.datos)}" value="Calculo de valores"/>
+			<p:commandButton align="center" style="background-color: #3CBC8D" update="calculadora_form" actionListener="#{calculadoraBean.restart()}" value="Restart"/>
+			</p:panelGrid>	
+		
+			<div class="input-group">
+				<input id="mensaje" type="text" class="form-control" placeholder="Ingresar mensaje">
+				<button id="button" align="center" class="btn btn-primary" style="background-color: #90afa4" type="button">Publicar</button>
+			</div>
+		</h:form>
+
+		<div class="row" style="width: 50%;margin: auto;">
+            <div class="col">
+                </br>
+                <table class="table table-striped" id="table_messages">
+                    <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Ultimos mensajes</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+	<script type="text/javascript" src="index.js" ></script>
+<img src="https://concepto.de/wp-content/uploads/2018/08/Estadistica-inferencial-min-e1533841684477.jpg" alt="Trulli" width="49%" height="170"></img>
+<img src="https://developingthebusiness.com/wp-content/uploads/2018/05/Estadisticas-de-ventas.jpg" alt="Trulli" width="50%" height="170"></img>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</h:body>
+
+</html>
