@@ -34,16 +34,9 @@ El ejecutable de javadoc "index.html" se encuentra en target\site\apidocs al eje
 mvn javadoc:javadoc
 ```
 
-## Pruebas 
+**Ejecutando el programa **
 
-prueba pagina 1:
-
-[Enlace Heroku](https://sleepy-wave-57175.herokuapp.com/index.html)
-
-prueba pagina 2:
-
-[Enlace Heroku](https://sleepy-wave-57175.herokuapp.com/pagina.html)
-
-prueba pagina 3 con script:
-
-[Enlace Heroku](https://sleepy-wave-57175.herokuapp.com/hola.html)
+debe usar el comando desde el directorio raíz usando Docker ToolBox
+```
+docker-compose up -d --scale web=3
+```
