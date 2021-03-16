@@ -23,10 +23,9 @@ public class Client {
 
 
 	    /**
-	     *
-	     * @param path The corresponding path to which the method would be carried out
+	     *metodo get
 	     * @return the response of the method
-	     * @throws IOException
+	     * @throws UnirestException exception
 	     */
 	    public String getMessages() throws UnirestException  {
 	        
@@ -38,18 +37,17 @@ public class Client {
 	        return response.body().string();
 	    **/
 	    	HttpResponse<String> apiResponse = Unirest.get(baseUrl+ports[serverNumber]+"/mensajes").asString();
-	        System.out.println("Petición GET de "+baseUrl+ports[serverNumber]);
+	       // System.out.println("Peticion GET de "+baseUrl+ports[serverNumber]);
 	        return apiResponse.getBody();
 	    	
 	    }	
 	    
 
 	    /**
-	     * 
+	     * metodo post
 	     * @param message The message to apply to the post method
-	     * @param path The corresponding path to which the method would be carried out
 	     * @return the response of the method
-	     * @throws IOException
+	     * @throws UnirestException  exception IO
 	     */
 	    public String postMessage( String message) throws UnirestException {
 	       /** RequestBody body = RequestBody.create(message,JSON);
@@ -63,7 +61,7 @@ public class Client {
 	    	HttpResponse<String> apiResponse = Unirest.post(baseUrl+ports[serverNumber]+"/mensajes")
 	                .body(message)
 	                .asString();
-	        System.out.println("Petición POST de "+baseUrl+ports[serverNumber]);
+	      //  System.out.println("Peticion POST de "+baseUrl+ports[serverNumber]);
 	        return apiResponse.getBody();
 	    }
 	    

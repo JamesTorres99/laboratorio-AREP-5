@@ -1,22 +1,15 @@
-# *AREP - Laboratorio 4*
-# TALLER DE ARQUITECTURAS DE SERVIDORES DE APLICACIONES, META PROTOCOLOS DE OBJETOS, PATRÓN IOC, REFLEXIÓN
+# *AREP - Laboratorio 5*
+# TALLER DE DE MODULARIZACIÓN CON VIRTUALIZACIÓN E INTRODUCCIÓN A DOCKER Y A AWS
 
 ## Integrantes:
 
 - James Alexander Torres
 
 ## Use Maven, Circle CI, AWS, Docker, GIT and GITHUB.
-Para este taller los estudiantes deberán construir un servidor Web (tipo Apache) en Java. El servidor debe ser capaz de entregar páginas html e imágenes tipo PNG. Igualmente el servidor debe proveer un framework IoC para la construcción de aplicaciones web a partir de POJOS. Usando el servidor se debe construir una aplicación Web de ejemplo y desplegarlo en Heroku. El servidor debe atender múltiples solicitudes no concurrentes.
-
-Para este taller desarrolle un prototipo mínimo que demuestre capcidades reflexivas de JAVA y permita por lo menos cargar un bean (POJO) y derivar una aplicación Web a partir de él. Debe entregar su trabajo al final del laboratorio.
+El taller consiste en crear una aplicación web pequeña usando el micro-framework de Spark java (http://sparkjava.com/). Una vez tengamos esta aplicación procederemos a construir un container para docker para la aplicación y los desplegaremos y configuraremos en nuestra máquina local. Luego, cerremos un repositorio en DockerHub y subiremos la imagen al repositorio. Finalmente, crearemos una máquina virtual de en AWS, instalaremos Docker , y desplegaremos el contenedor que acabamos de crear.
 
 ## Despliegue 
-[![CircleCI](https://circleci.com/gh/JamesTorres99/laboratorio-AREP-4.svg?style=svg)](https://circleci.com/gh/JamesTorres99/laboratorio-AREP-4)
-
-Enlace heroku
-
-[Enlace Heroku](https://sleepy-wave-57175.herokuapp.com/index.html)
-
+[![CircleCI](https://circleci.com/gh/JamesTorres99/laboratorio-AREP-5.svg?style=svg)](https://circleci.com/gh/JamesTorres99/laboratorio-AREP-5)
 
 **Compilar el proyecto con maven**
 ```
