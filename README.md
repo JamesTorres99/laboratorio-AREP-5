@@ -34,7 +34,7 @@ El ejecutable de javadoc "index.html" se encuentra en target\site\apidocs al eje
 mvn javadoc:javadoc
 ```
 
-**Ejecutando el programa **
+**Ejecutando el programa**
 
 debe usar el comando desde el directorio raíz usando Docker ToolBox
 ```
